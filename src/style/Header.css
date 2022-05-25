@@ -1,0 +1,85 @@
+.head {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    padding: 31px 40px;
+  }
+  
+  @media screen and (max-width: 375px) {
+    .head {
+      padding: 20px;
+    }
+  }
+  
+  .head__logo {
+    text-align: left;
+  }
+  
+  .head__burger-menu {
+    display: none;
+  }
+  
+  @media screen and (max-width: 375px) {
+    .head__burger-menu {
+      display: block;
+    }
+  }
+  
+  .head__menu {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  
+  @media screen and (max-width: 375px) {
+    .head__menu {
+      display: none;
+    }
+  }
+  
+  .head__menu-item {
+    padding-right: 30px;
+  }
+  
+  .head__menu-item:hover {
+    color: #61a199;
+    transition: all 400ms ease;
+  }
+  
+  .head__button {
+    border: 1px solid rgb(27 27 27 / 40%);
+    box-sizing: border-box;
+    border-radius: 6px;
+    align-items: center;
+    padding: 12px 30px;
+    margin-left: 10px;
+    background-color: #fff;
+  }
+  
+  .head__button:hover {
+    background-color: rgb(97 161 153 / 10%);
+    transition: all 400ms ease;
+  }
+  
+  /* main */
+  .drawTeam {
+    text-align: center;
+  }
+  
+  .drawTeam__img {
+    margin-top: 80px;
+    width: 397px;
+    height: 300px;
+  }
+  
+  @media screen and (max-width: 375px) {
+    .drawTeam__img {
+      width: 268px;
+      height: 202px;
+      margin-top: 40px;
+    }
+  }
+  
