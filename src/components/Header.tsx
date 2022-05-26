@@ -1,43 +1,41 @@
 import * as React from "react";
 
 import "../AboutUs/AboutUs.css";
-import MainAboutUs from "./MainAboutUs";
-import MainQuestions from "./MainQuestions";
+
+import Link from "./Link";
+import Image from "./Image";
 
 function Header(props){
 
-  let whatThePage = "";
-  let children = props.children;
+  let navLinksContent = [
+  {
+    "href" : "#",
+    "content" : "О нас",
+    "className" : "head__menu-item",
+  }, {
+    "href" : "#",
+    "content" : "Условия",
+    "className" : "head__menu-item",
+  }, {
+    "href" : "#",
+    "content" : "Частые вопросы",
+    "className" : "head__menu-item",
+  },
+];
 
-  
-
-
-  function aboutUsPage () {
-    whatThePage = 'aboutUs'
-    console.log(children)
-  };
-
-  function questionsPage () {
-    whatThePage = 'questions'
-    return
-  };
-  
-  
-    
     return(
         <>
-        <header className="head"><a className="head__logo"><img src="img/Logo.png" width="115px" height="28px" alt="Логотип"/></a>
-      <div className="head__burger-menu"><img src="img/VectorBurger.png" alt="развернуть меню"/></div>
-      <nav className="head__menu">
-        <a className="head__menu-item" href="#" onClick={aboutUsPage}>О нас</a>
-        <a className="head__menu-item" href="#" >Условия</a>
-        <a className="head__menu-item" href="#" onClick={questionsPage}>Частые Вопросы</a>
-        <button className="head__button" type="submit">Войти</button>
-      </nav>
+        <header className="head"><Link className={"head__logo"} href={"#"} content={<Image src={"img/Logo.png"} alt={"Логотип"} width={"115px"} height={"28px"}/>}/>
+          <div className="head__burger-menu">
+          <Image src={"img/VectorBurger.png"} alt={"развернуть меню"}/>
+          </div>
+            <nav className="head__menu">
+              {navLinksContent.map((linkContent) => <Link className={linkContent.className} href={linkContent.href} content={linkContent.content}/>)}
+              <button className="head__button" type="submit">Войти</button>
+            </nav>
     </header>
-  
         </>
-    )
-}
+    );
+};
 
 export default Header;

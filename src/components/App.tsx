@@ -4,26 +4,23 @@ import * as React from "react";
 import Header from './Header';
 import Footer from './Footer';
 import Main from "./Main";
-import Contacts_board from "./Contacts_board";
-import Team from "./Team";
-import MainAboutUs from "./MainAboutUs";
-import MainQuestions from "./MainQuestions";
 
+function App(props) {
 
-
-function App() {
+    const [pages, setPage] = React.useState("aboutUs");
+   
+    function takePage () {
+      
+    }   
+    console.log(props)
  
         return (
             <>
-            <Header>
-                <MainAboutUs/>
-                <MainQuestions/>
-            </Header>
-            <Contacts_board/>
-            <Team></Team>
+            <Header pages={["aboutUs", "questions"]}/>
+            <Main/>
             <Footer/>
             </>
         );
-}
+};
 
 export default App;

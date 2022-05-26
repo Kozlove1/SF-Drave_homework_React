@@ -1,39 +1,32 @@
 import * as React from "react";
 
-import "../AboutUs/AboutUs.css";
+import "../FAQ/FaqNew.css";
 
+import Image from "./Image";
 
-function Question_box () {
-    return(
-        <>
-    <section className="questions">
-        <div className="questions__container">
-          <button className="questions__box-collapsible" type="button"><img className="questions__answer-button-down" src="img/Down.png" alt="раскрыть ответ"/><img className="questions__answer-button-up" src="img/Up.png" alt="свернуть ответ"/></button>
-            <div className="questions__answer-box">
-              <p className="questions__answer-text"></p>
-            </div>
-            <button className="questions__box-collapsible" type="button"><img className="questions__answer-button-down" src="img/Down.png" alt="раскрыть ответ"/><img className="questions__answer-button-up" src="img/Up.png" alt="свернуть ответ"/></button>
-            <div className="questions__answer-box">
-              <p className="questions__answer-text"></p>
-            </div>
-            <button className="questions__box-collapsible" type="button"><img className="questions__answer-button-down" src="img/Down.png" alt="раскрыть ответ"/><img className="questions__answer-button-up" src="img/Up.png" alt="свернуть ответ"/></button>
-            <div className="questions__answer-box">
-              <p className="questions__answer-text"></p>
-            </div>
-            <button className="questions__box-collapsible" type="button"><img className="questions__answer-button-down" src="img/Down.png" alt="раскрыть ответ"/><img className="questions__answer-button-up" src="img/Up.png" alt="свернуть ответ"/></button>
-            <div className="questions__answer-box">
-              <p className="questions__answer-text"></p>
-            </div>
-            <button className="questions__box-collapsible" type="button"><img className="questions__answer-button-down" src="img/Down.png" alt="раскрыть ответ"/><img className="questions__answer-button-up" src="img/Up.png" alt="свернуть ответ"/></button>
-            <div className="questions__answer-box">
-              <p className="questions__answer-text"></p>
-            </div>
-            <button className="questions__box-collapsible" type="button"><img className="questions__answer-button-down" src="img/Down.png" alt="раскрыть ответ"/><img className="questions__answer-button-up" src="img/Up.png" alt="свернуть ответ"/></button>
-            <div className="questions__answer-box">
-              <p className="questions__answer-text"></p>
-            </div>
-        </div>
-    </section>
+function Question_box (props) {
+
+  let imageButtonOnQuestionBox = [
+    {
+      "className" : "questions__answer-button-down",
+      "src" : "img/Down.png",
+      "alt" : "раскрыть ответ",
+    }, {
+      "className" : "questions__answer-button-up",
+        "src" : "img/Up.png",
+        "alt" : "свернуть ответ",
+     },
+  ];
+
+  return(
+      <>
+        <button className="questions__box-collapsible" type="button">
+          {props.question}
+          {imageButtonOnQuestionBox.map((imageButton) => <Image className={imageButton.className} src={imageButton.src} alt={imageButton.alt}/>)}
+        </button>
+          <div className="questions__answer-box">
+            <p className="questions__answer-text">{props.answer}</p>
+          </div>
         </>
     );
 };
