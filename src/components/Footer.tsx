@@ -11,42 +11,33 @@ function Footer (props){
         {
           "href" : "#",
           "className" : "footer__socials__link",
-          "content" : <Image src={"img/faceBook.png"} alt={"facebook"}/>,
-        }, {
+          "content" :{
+            "src" : "img/faceBook.png",
+            "alt" :"facebook",
+        },         }, {
           "href" : "#",
           "className" : "footer__socials__link",
-          "content" : <Image src={"img/instagramm.png"} alt={"instagramm"}/>,
-        }, {
+          "content" :{
+            "src" : "img/instagramm.png",
+            "alt" : "instagramm",
+        },        }, {
           "href" : "#",
           "className" : "footer__socials__link",
-          "content" : <Image src={"img/vk.png"} alt={"vkontakte"}/>,
+          "content" :{
+              "src" : "img/vk.png",
+              "alt" : "vkontakte",
+          },
         },
     ];
-    
-//     let imgContent =[
-//     {
-//         "src" : "img/faceBook.png",
-//         "alt" :"facebook",
-//     }, 
-//     {
-//         "src" : "img/instagramm.png",
-//         "alt" : "instagramm",
-//     }, 
-//     {
-//         "src" : "img/vk.png",
-//         "alt" : "vkontakte",
-//     },
-// ];
-
-// imgContent.map((imgContent) => <Image src={imgContent.src} alt={imgContent.alt}/>)
-
 
     return(
         <>
             <footer className="footer">
                 <div className="footer__copywright">© SkillDrive Inc. 2020</div>
                 <div className="footer__socials">
-                    {linkContent.map((linkContent) => <Link href={linkContent.href} className={linkContent.className} content={linkContent.content}/>)}
+                    {linkContent.map((linkContent) => <Link href={linkContent.href} className={linkContent.className}>
+                    <Image src={linkContent.content.src} alt={linkContent.content.alt}/>
+                    </Link>)}
                 </div>
             </footer>
         </>

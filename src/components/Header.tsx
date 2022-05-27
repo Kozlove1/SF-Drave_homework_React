@@ -25,12 +25,12 @@ function Header(props){
 
     return(
         <>
-        <header className="head"><Link className={"head__logo"} href={"#"} content={<Image src={"img/Logo.png"} alt={"Логотип"} width={"115px"} height={"28px"}/>}/>
+        <header className="head"><Link className={"head__logo"} href={"#"}><Image src={"img/Logo.png"} alt={"Логотип"} width={"115px"} height={"28px"}/></Link>
           <div className="head__burger-menu">
           <Image src={"img/VectorBurger.png"} alt={"развернуть меню"}/>
           </div>
             <nav className="head__menu">
-              {navLinksContent.map((linkContent) => <Link className={linkContent.className} href={linkContent.href} content={linkContent.content}/>)}
+              {navLinksContent.map((linkContent) => <Link className={linkContent.className} href={linkContent.href}>{linkContent.content}</Link>)}
               <button className="head__button" type="submit">Войти</button>
             </nav>
     </header>
