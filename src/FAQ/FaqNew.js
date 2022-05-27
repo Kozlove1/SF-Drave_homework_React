@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 
 
-  const coll = document.querySelectorAll('.questions__box-collapsible');
+const coll = document.querySelectorAll('.questions__box-collapsible');
 
 for (let i = 0; i < coll.length; i++) {
   coll[i].addEventListener('click', function () {
@@ -15,4 +15,3 @@ for (let i = 0; i < coll.length; i++) {
     }
   });
 }
-

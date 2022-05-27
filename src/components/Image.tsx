@@ -1,9 +1,13 @@
-import * as React from "react"
+import * as React from "react";
 
-function Image (props) {
-    return(
-        <img className={props.className} src={props.src} alt={props.alt}/>
-    );
-};
+function Image(props: {
+  className?: string;
+  src: string;
+  alt: string;
+  width?: string;
+  height?: string;
+}) {
+  return <img className={props.className} src={props.src} alt={props.alt} />;
+}
 
 export default Image;

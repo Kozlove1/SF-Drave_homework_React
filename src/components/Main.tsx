@@ -4,19 +4,18 @@ import MainAboutUsAndTeam from "./MainAboutUsAndTeam";
 import MainQuestions from "./MainQuestions";
 
 import "../AboutUs/AboutUs.css";
+import { Pages } from "./Pages";
 
-function Main (props) {
-
-  const [page, setPage] = React.useState(true);
-
-  return(
+function Main(props: { currentPage: Pages }) {
+  return (
     <>
-       {page ? 
-        <MainAboutUsAndTeam/> : 
-        <MainQuestions/>
-        }
+      {props.currentPage === Pages.aboutUs ? (
+        <MainAboutUsAndTeam />
+      ) : (
+        <MainQuestions />
+      )}
     </>
   );
-};
+}
 
 export default Main;

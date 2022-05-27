@@ -2,11 +2,10 @@ import * as React from "react";
 
 import "../AboutUs/AboutUs.css";
 
-
-function Contacts_board (props) {
-    return(
-        <>
-        <section className="contacts">
+function Contacts_board(props: {}) {
+  return (
+    <>
+      <section className="contacts">
         <h2>Контакты</h2>
         <div className="contacts__container">
           <div className="contacts__telephone">
@@ -21,9 +20,8 @@ function Contacts_board (props) {
           </div>
         </div>
       </section>
-        </>
-    );
-
-};
+    </>
+  );
+}
 
 export default Contacts_board;
