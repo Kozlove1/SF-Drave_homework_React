@@ -22,8 +22,18 @@ module.exports = {
                test: /\.css$/,
                use: ["style-loader", "css-loader"]
            },
-           { test: /\.txt$/, use: 'raw-loader' }
-        ]
+           { 
+               test: /\.txt$/, use: 'raw-loader' 
+            },
+           {
+            test: /\.(png|jpg|svg|gif)$/,
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'img',
+            },
+            },
+        ],
     },
     plugins: [
         new HtmlWebpackPlugin({
