@@ -3,6 +3,7 @@ import * as React from "react";
 import "../FAQ/FaqNew.css";
 
 import Image from "./Image";
+import { ClassLists } from "./ClassLists";
 
 function Question_box(props: { question: string; answer: string }) {
   let imageButtonOnQuestionBox = [
@@ -18,9 +19,23 @@ function Question_box(props: { question: string; answer: string }) {
     },
   ];
 
+  const [classNameActive, setClassNameActive] = React.useState(
+    ClassLists.notActive
+  );
+
   return (
     <>
-      <button className="questions__box-collapsible" type="button">
+      <button
+        className={`questions__box-collapsible ${classNameActive}`}
+        type="button"
+        onClick={() =>
+          setClassNameActive(
+            classNameActive === ClassLists.notActive
+              ? ClassLists.active
+              : ClassLists.notActive
+          )
+        }
+      >
         {props.question}
         {imageButtonOnQuestionBox.map((imageButton) => (
           <Image
@@ -30,7 +45,7 @@ function Question_box(props: { question: string; answer: string }) {
           />
         ))}
       </button>
-      <div className="questions__answer-box">
+      <div className="questions__answer-box" style={{maxHeight: classNameActive === ClassLists.active ? "2em" : null}}>
         <p className="questions__answer-text">{props.answer}</p>
       </div>
     </>
