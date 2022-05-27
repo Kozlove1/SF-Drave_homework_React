@@ -54,7 +54,7 @@ function MainQuestions(props: {}) {
       <section className="questions">
         <div className="questions__container">
           {contentQuestionBox.map((content) => (
-            <Question_box question={content.question} answer={content.answer} />
+            <Question_box key={content.question} question={content.question} answer={content.answer} />
           ))}
         </div>
       </section>

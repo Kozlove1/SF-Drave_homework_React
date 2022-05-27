@@ -39,13 +39,14 @@ function Question_box(props: { question: string; answer: string }) {
         {props.question}
         {imageButtonOnQuestionBox.map((imageButton) => (
           <Image
+            key={imageButton.alt}
             className={imageButton.className}
             src={imageButton.src}
             alt={imageButton.alt}
           />
         ))}
       </button>
-      <div className="questions__answer-box" style={{maxHeight: classNameActive === ClassLists.active ? "2em" : null}}>
+      <div className="questions__answer-box" style={{maxHeight: classNameActive === ClassLists.active ? "100em": null}}>
         <p className="questions__answer-text">{props.answer}</p>
       </div>
     </>
