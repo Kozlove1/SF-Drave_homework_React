@@ -8,7 +8,7 @@ const argv = yargs.command(
   {},
   (argv) => {
     const contentComponent = `
-    import * as React from "react;
+    import * as React from "react";
 
     function MyComponent(props) {
 
