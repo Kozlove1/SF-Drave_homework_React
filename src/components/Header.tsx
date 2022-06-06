@@ -4,7 +4,7 @@ import "../AboutUs/AboutUs.css";
 
 import { Pages } from "./Pages";
 
-import Link from "./Link";
+import { Link } from "react-router-dom";
 import Image from "./Image";
 
 import "../img/Logo.png";
@@ -16,7 +16,7 @@ function Header(props: {
 }) {
   const navLinksContent = [
     {
-      href: "#",
+      href: "",
       content: "О нас",
       className: "head__menu-item",
       pageId: Pages.aboutUs,
@@ -27,7 +27,7 @@ function Header(props: {
       className: "head__menu-item",
     },
     {
-      href: "#",
+      href: "questions",
       content: "Частые вопросы",
       className: "head__menu-item",
       pageId: Pages.questions,
@@ -37,7 +37,7 @@ function Header(props: {
   return (
     <>
       <header className="head">
-        <Link className={"head__logo"} href={"#"}>
+        <Link to={"/"} className={"head__logo"}>
           <Image
             src={"img/Logo.png"}
             alt={"Логотип"}
@@ -51,13 +51,9 @@ function Header(props: {
         <nav className="head__menu">
           {navLinksContent.map((linkContent) => (
             <Link
+              key={linkContent.href}
+              to={linkContent.href}
               className={linkContent.className}
-              href={linkContent.href}
-              onClick={() => {
-                linkContent.pageId
-                  ? props.setCurrentPage(linkContent.pageId)
-                  : null;
-              }}
             >
               {linkContent.content}
             </Link>

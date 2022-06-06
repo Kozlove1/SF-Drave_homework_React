@@ -2,7 +2,7 @@ import * as React from "react";
 
 import "../AboutUs/AboutUs.css";
 
-import Link from "./Link";
+import { Link } from "react-router-dom";
 import Image from "./Image";
 
 import "../img/social/faceBook.png";
@@ -12,7 +12,7 @@ import "../img/social/instagramm.png";
 function Footer(props: {}) {
   let linkContent = [
     {
-      href: "#",
+      href: "https://ru-ru.facebook.com/",
       className: "footer__socials__link",
       content: {
         src: "img/faceBook.png",
@@ -20,7 +20,7 @@ function Footer(props: {}) {
       },
     },
     {
-      href: "#",
+      href: "https://www.instagram.com/",
       className: "footer__socials__link",
       content: {
         src: "img/instagramm.png",
@@ -28,7 +28,7 @@ function Footer(props: {}) {
       },
     },
     {
-      href: "#",
+      href: "https://vk.com",
       className: "footer__socials__link",
       content: {
         src: "img/vk.png",
@@ -43,12 +43,12 @@ function Footer(props: {}) {
         <div className="footer__copywright">© SkillDrive Inc. 2020</div>
         <div className="footer__socials">
           {linkContent.map((linkContent) => (
-            <Link href={linkContent.href} className={linkContent.className}>
+            <a key ={linkContent.href} href ={linkContent.href} className={linkContent.className}>
               <Image
                 src={linkContent.content.src}
                 alt={linkContent.content.alt}
               />
-            </Link>
+            </a>
           ))}
         </div>
       </footer>
