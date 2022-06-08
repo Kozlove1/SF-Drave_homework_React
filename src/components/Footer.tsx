@@ -2,7 +2,6 @@ import * as React from "react";
 
 import "../AboutUs/AboutUs.css";
 
-import { Link } from "react-router-dom";
 import Image from "./Image";
 
 import "../img/social/faceBook.png";
