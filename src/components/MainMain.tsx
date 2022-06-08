@@ -4,7 +4,7 @@ import BigBoxImgAndText from "./BigBoxImgAndText";
 import StepBox from "./StepBox";
 import MySwiper from "./MySwiper";
 import Image from "./Image";
-import { Button }from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 import "../img/BigImgFromMainPage/undraw_fast_car_p4cu.png";
 import "../img/BigImgFromMainPage/undraw_online_transactions_02ka.png";
@@ -20,15 +20,7 @@ import "../img/RentalEllipses/Ellipse.png";
 import "../img/BigBabyWithACar.png";
 import "../img/BigGirlOnACar.png";
 
-
-
-
-
-
-
-
 function MainMain(props) {
-
   const contentForBigBoxes = [
     {
       classNameForImagePosition: "",
@@ -64,19 +56,22 @@ function MainMain(props) {
 
   return (
     <>
-    <div className="BoxFor_BiGirlWithACar_AnD_BoxFor_ButtonAndTExt">
-      <div >
-        <Image  className={"BigGirlOnACar"} src={"img/BigGirlOnACar.png"} alt={""}/>
-      </div>
-      <div className={"BoxFor_ButtonAndText"}>
-      <h2>Попробуйте аренду на себе</h2>
-      <p>Будьте всегда за рулём во время путешествий и командировок.</p>
-      <Button className={""}>Зарегистрироваться</Button>
-      </div>
+      <div className="BoxFor_BiGirlWithACar_AnD_BoxFor_ButtonAndTExt">
+        <div>
+          <Image
+            className={"BigGirlOnACar"}
+            src={"img/BigGirlOnACar.png"}
+            alt={""}
+          />
+        </div>
+        <div className={"BoxFor_ButtonAndText"}>
+          <h2>Попробуйте аренду на себе</h2>
+          <p>Будьте всегда за рулём во время путешествий и командировок.</p>
+          <Button className={""}>Зарегистрироваться</Button>
+        </div>
       </div>
 
-
-        {contentForBigBoxes.map((bigBox) => (
+      {contentForBigBoxes.map((bigBox) => (
         <BigBoxImgAndText
           classNameForImagePosition={bigBox.classNameForImagePosition}
           classNameForImage={bigBox.classNameForImage}
@@ -142,16 +137,15 @@ function MainMain(props) {
         <div className="lineBetwenStep" />
       </div>
       <div className="swiperBox">
-        <MySwiper/>
+        <MySwiper />
       </div>
       <div className="BoxFor_BigBabyWithACar">
-      <div>
-        <Image  className={""} src={"img/BigBabyWithACar.png"} alt={""}/>
+        <div>
+          <Image className={""} src={"img/BigBabyWithACar.png"} alt={""} />
+        </div>
+        <h2>Попробуйте аренду на себе</h2>
+        <Button className={""}>Зарегистрироваться</Button>
       </div>
-      <h2>Попробуйте аренду на себе</h2>
-      <Button className={""}>Зарегистрироваться</Button>
-      </div>
-
     </>
   );
 }
