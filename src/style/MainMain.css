@@ -1,0 +1,252 @@
+.BoxFor_BiGirlWithACar {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0 0 120px;
+}
+
+.BoxFor_ButtonAndText {
+  display: flex;
+  width: 617px;
+  height: 345px;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 204px;
+  margin: 0;
+  justify-content: center;
+}
+
+.FirstTextAtThePage {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  text-align: left;
+  /* or 77px */
+  margin: 0px;
+  padding: 0 0 30px;
+  color: #1b1b1b;
+}
+
+.SecondTextAtThePage {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+
+  margin: 0px;
+  padding: 0 0 40px;
+  /* or 35px */
+
+  color: #1b1b1b;
+}
+
+.classForBox {
+  display: flex;
+  align-items: center;
+  padding: 0 0 26px;
+}
+
+.classNameForBoxImageAndText {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 0 160px;
+}
+
+.classNameForBoxImageAndText_revers {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 0 160px;
+}
+
+.classNameForImagePosition {
+  display: flex;
+}
+.classNameForImage {
+  display: flex;
+}
+
+.TextH2_About {
+  /* H2 Desktop */
+  text-align: left;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  /* or 58px */
+  margin: 0;
+  padding: 0 0 20px;
+  /* Black */
+
+  color: #1b1b1b;
+}
+.TextP_About {
+  /* Text M */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+
+  /* Black */
+
+  color: #1b1b1b;
+}
+
+.classNameForTextPosition {
+  display: flex;
+  flex-direction: column;
+  width: 444px;
+  height: 223px;
+  text-align: left;
+}
+
+.BoxFor_rental_steps {
+  display: flex;
+  height: 552px;
+  left: 0px;
+  top: 2198px;
+  background: #f7f9fb;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 0 120px;
+}
+
+.BoxFor_DoYouHaveCar_steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.classForBoxInBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.classForBoxStepBox {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0 110px;
+}
+
+.Text_rental_stepsH2 {
+  /* H2 Desktop */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+
+  /* identical to box height, or 58px */
+  margin: 0;
+  /* Black */
+
+  color: #1b1b1b;
+}
+
+.Text_DoYouHAveCarH2 {
+  /* H2 Desktop */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+
+  /* identical to box height, or 58px */
+  margin: 0;
+  padding: 0 0 20px;
+
+  /* Black */
+
+  color: #1b1b1b;
+}
+
+.Text_DoYouHAveCarParagraph {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 147.3%;
+  /* or 35px */
+
+  text-align: center;
+  margin: 0;
+  padding: 0 0 80px;
+  /* Black */
+
+  color: #1b1b1b;
+}
+
+.text_Rent_And_YouHaveCar {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+
+  text-align: center;
+
+  /* Black */
+
+  color: #1b1b1b;
+}
+
+.RegistrationButton {
+  padding: 16px 40px;
+  gap: 10px;
+
+  width: 237px;
+  height: 51px;
+  color: aliceblue;
+  background: #61a199;
+  border-radius: 6px;
+  border: 0px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+.BoxFor_BigBabyWithACar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BigBaby {
+
+    padding-bottom: 40px;
+
+}
+
+.TexTryRent {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 120%;
+  /* identical to box height, or 58px */
+
+  text-align: center;
+margin: 0;
+padding: 0 0 40px;
+  /* Black */
+
+  color: #1b1b1b;
+}

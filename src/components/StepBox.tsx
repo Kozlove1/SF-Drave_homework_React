@@ -3,16 +3,25 @@ import * as React from "react";
 import Image from "./Image";
 
 function StepBox(props: {
-    className: string;
-    src: string;
-    alt: string;
-    paragraph: string;
+  classNameForImg: string;
+  src: string;
+  srcLine?: string;
+  alt?: string;
+  paragraph?: string | React.ReactElement;
+  classForBox: string;
 }) {
   return (
-    <>
-      <Image className={props.className} src={props.src} alt={props.alt} />
+    <div className="classForBoxInBox">
+      <div className={props.classForBox}>
+        <Image
+          className={props.classNameForImg}
+          src={props.src}
+          alt={props.alt}
+        />
+        <Image className={props.classNameForImg} src={props.srcLine} />
+      </div>
       <p>{props.paragraph}</p>
-    </>
+    </div>
   );
 }
 

@@ -3,7 +3,7 @@ import * as React from "react";
 function Image(props: {
   className?: string;
   src: string;
-  alt: string;
+  alt?: string;
   width?: string;
   height?: string;
 }) {

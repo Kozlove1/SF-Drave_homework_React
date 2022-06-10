@@ -1,10 +1,17 @@
 .head {
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: space-around;
-    justify-content: space-between;
-    align-items: center;
-    padding: 31px 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+  padding: 31px 40px;
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  z-index: auto;
+
+
   }
   
   @media screen and (max-width: 375px) {
