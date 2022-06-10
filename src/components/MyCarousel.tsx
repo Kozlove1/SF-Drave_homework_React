@@ -10,8 +10,6 @@ import "../img/DoteNav.png"
 import "../img/ActiveDoteNav.png"
 
 
-
-
 import { useState } from 'react';
 import ReactSimplyCarousel from 'react-simply-carousel';
 
