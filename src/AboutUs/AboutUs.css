@@ -396,7 +396,7 @@ template {
   position: fixed;
   right: 0px;
   left: 0px;
-  z-index: auto;
+  z-index: 1;
 }
 
 @media screen and (max-width: 375px) {

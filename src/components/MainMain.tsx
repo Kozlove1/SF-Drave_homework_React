@@ -2,7 +2,7 @@ import * as React from "react";
 
 import BigBoxImgAndText from "./BigBoxImgAndText";
 import StepBox from "./StepBox";
-import MySwiper from "./MySwiper";
+import MySwiper from "./MyCarousel";
 import Image from "./Image";
 import { Button } from "react-bootstrap";
 
@@ -22,6 +22,7 @@ import "../img/RentalEllipses/Ellipse.png";
 import "../img/BigBabyWithACar.png";
 import "../img/BigGirlOnACar.png";
 import "../img/Line 1.png";
+import ReactSimplyCarouselExample from "./MyCarousel";
 
 function MainMain(props) {
   const contentForBigBoxes = [
@@ -123,18 +124,19 @@ function MainMain(props) {
   return (
     <>
 <div className="BoxFor_BiGirlWithACar">
-        
-          <Image
-            className={"BigGirlOnACar"}
-            src={"img/BigGirlOnACar.png"}
-            alt={""}
-          />
+           
            <div className="BoxFor_ButtonAndText">
           <h1 className="FirstTextAtThePage">Каршеринг в любой точке России</h1>
           <p className="SecondTextAtThePage">Будьте всегда за рулём во время путешествий и командировок.</p>
           <Button className={"RegistrationButton"}>Зарегистрироваться</Button>
         </div>
 
+        <div className={"BigGirlOnACar"}>
+          <Image
+            src={"img/BigGirlOnACar.png"}
+            alt={""}
+          />  
+          </div>
         </div>
        
 
@@ -185,7 +187,8 @@ function MainMain(props) {
       </div>
 
       <div className="swiperBox">
-        <MySwiper />
+        <h2 className="H2TextCustomerReviews">Отзывы Клиентов</h2>
+        <ReactSimplyCarouselExample/>
       </div>
 
       <div className="BoxFor_BigBabyWithACar">
