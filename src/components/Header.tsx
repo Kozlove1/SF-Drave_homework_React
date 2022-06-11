@@ -6,6 +6,7 @@ import { Pages } from "./Pages";
 
 import { Link } from "react-router-dom";
 import Image from "./Image";
+import { ClassLists } from "./ClassLists";
 
 import "../img/Logo.png";
 import "../img/VectorBurger.png";
@@ -13,6 +14,7 @@ import "../img/VectorBurger.png";
 function Header(props: {
   currentPage: Pages;
   setCurrentPage: (page: Pages) => void;
+  classNameHedeNoOpacity: ClassLists;
 }) {
   const navLinksContent = [
     {
@@ -36,7 +38,7 @@ function Header(props: {
 
   return (
     <>
-      <header className="head">
+      <header className={`${props.classNameHedeNoOpacity}`} >
         <Link to={"/"} className={"head__logo"}>
           <Image
             src={"img/Logo.png"}

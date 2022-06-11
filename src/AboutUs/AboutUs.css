@@ -397,6 +397,21 @@ template {
   right: 0px;
   left: 0px;
   z-index: 1;
+  transition: 0.4s;
+}
+.headNoOpacity {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  padding: 31px 40px;
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.80);
+  transition: 0.4s;
 }
 
 @media screen and (max-width: 375px) {
