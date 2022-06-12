@@ -23,8 +23,11 @@ import "../img/BigBabyWithACar.png";
 import "../img/BigGirlOnACar.png";
 import "../img/Line 1.png";
 import ReactSimplyCarouselExample from "./MyCarousel";
+import VisibilitySensor from "react-visibility-sensor";
 
-function MainMain(props) {
+function MainMain(props:{
+  onChange: (isVisible: Boolean) => void;
+}) {
   const contentForBigBoxes = [
     {
       classNameForImagePosition: "classNameForImagePosition",
@@ -123,7 +126,8 @@ function MainMain(props) {
 
   return (
     <>
-<div className="BoxFor_BiGirlWithACar">
+    <VisibilitySensor onChange={props.onChange}>
+        <div className="BoxFor_BiGirlWithACar">
            
            <div className="BoxFor_ButtonAndText">
           <h1 className="FirstTextAtThePage">Каршеринг в любой точке России</h1>
@@ -138,6 +142,7 @@ function MainMain(props) {
           />  
           </div>
         </div>
+        </VisibilitySensor>
        
 
       {contentForBigBoxes.map((bigBox) => (

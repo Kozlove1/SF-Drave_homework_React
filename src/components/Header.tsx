@@ -18,7 +18,7 @@ function Header(props: {
 }) {
   const navLinksContent = [
     {
-      href: "",
+      href: "aboutUs",
       content: "О нас",
       className: "head__menu-item",
       pageId: Pages.aboutUs,

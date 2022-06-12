@@ -9,7 +9,7 @@ import MainAboutUsAndTeam from "./MainAboutUsAndTeam";
 import MainQuestions from "./MainQuestions";
 import { Routes } from "react-router-dom";
 import { Route } from "react-router";
-import VisibilitySensor from "react-visibility-sensor";
+
 import { ClassLists } from "./ClassLists";
 
 function App(props: {}) {
@@ -33,27 +33,14 @@ function App(props: {}) {
         setCurrentPage={setPage}
       />
       <Routes>
-        <Route
-          path=""
-          element={
-            <VisibilitySensor onChange={onChange}>
-              <MainMain />
-            </VisibilitySensor>
-          }
-        />
+            <Route path="" element={<MainMain onChange={onChange}></MainMain>}/>
+            <Route path="aboutUs" element={<MainAboutUsAndTeam/>}/>
+            <Route path="questions" element={<MainQuestions/>}/>
       </Routes>
       <Footer />
     </div>
   );
 }
 
-/* <Routes>        
-        <Route path="" element={<MainAboutUsAndTeam/>}/>
-        <Route path="questions" element={<MainQuestions/>}/>
-        </Routes> */
-
-// <Routes>
-// <Route path="" element={<MainMain></MainMain>}/>
-// </Routes>
 
 export default App;
