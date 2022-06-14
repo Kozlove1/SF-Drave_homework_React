@@ -32,9 +32,6 @@ body {
 /**
    * Render the `main` element consistently in IE.
    */
-main {
-  display: block;
-}
 
 /**
    * Correct the font size and margin on `h1` elements within `section` and
@@ -396,7 +393,7 @@ template {
   position: fixed;
   right: 0px;
   left: 0px;
-  z-index: 1;
+  z-index: 3;
   transition: 0.4s;
 }
 .headNoOpacity {
@@ -409,13 +406,16 @@ template {
   position: fixed;
   right: 0px;
   left: 0px;
-  z-index: 1;
+  z-index: 3;
   background: rgba(255, 255, 255, 0.80);
   transition: 0.4s;
 }
 
 @media screen and (max-width: 375px) {
   .head {
+    padding: 20px;
+  }
+  .headNoOpacity {
     padding: 20px;
   }
 }
@@ -477,7 +477,7 @@ template {
 }
 
 .drawTeam__img {
-  margin-top: 80px;
+  margin-top: 170px;
   width: 397px;
   height: 300px;
 }
@@ -486,7 +486,7 @@ template {
   .drawTeam__img {
     width: 268px;
     height: 202px;
-    margin-top: 40px;
+    margin-top: 110px;
   }
 }
 

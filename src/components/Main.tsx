@@ -10,9 +10,9 @@ function Main(props: { currentPage: Pages }) {
   return (
     <>
       {props.currentPage === Pages.aboutUs ? (
-        <MainAboutUsAndTeam />
+        <MainAboutUsAndTeam onChange={()=>{}}/>
       ) : (
-        <MainQuestions />
+        <MainQuestions onChange={()=>{}}/>
       )}
     </>
   );

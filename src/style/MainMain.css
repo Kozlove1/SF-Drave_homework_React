@@ -1,26 +1,84 @@
-.BoxFor_BiGirlWithACar {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
+
+main {
+  display:block
+}
+@media screen and (max-width: 375px) {
+  main {
+    display:flex
+  }
+}
+
+.Container_BiGirlOnACarAndText {
   padding-bottom: 160px;
-}
-
-.BoxFor_ButtonAndText {
-  align-self: center;
-  width: 617px;
-  height: 345px;
-  position: absolute;
-  left: 200px;
-  z-index: 1;
-}
-
-.BigGirlOnACar {
-  z-index: auto;
-  align-self: flex-start;
+  display: flex;
   position: relative;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0;
 }
 
-.FirstTextAtThePage {
+@media screen and (max-width: 375px) {
+  .Container_BiGirlOnACarAndText {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin: 0;
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+        left: 20px;
+    }
+  }
+
+.Container_ButtonAndText {
+  width: 617px;
+  position: absolute;
+  height: 345px;
+  display: flex;
+  align-items: flex-start;
+  left: 204px;
+  justify-content: space-around;
+  flex-direction: column; 
+
+}
+@media screen and (max-width: 375px) {
+  .Container_ButtonAndText {
+    display: flex;
+    width: 375px;
+    flex-direction: column;
+    position: unset;
+    z-index: 1;
+    height: 200px;
+  }
+}
+
+.Container_BigGirlOnACar {
+ 
+}
+
+.BigGirlOnACar1 {
+  width: 1135px;
+  height: 813px;
+}
+
+@media screen and (max-width: 375px) {
+  .BigGirlOnACar1 {
+   display: none;
+  }
+}
+.BigGirlOnACar2 {
+  display: none;
+}
+
+@media screen and (max-width: 375px) {
+  .BigGirlOnACar2 {
+    display: initial;
+    width: 375px;
+    height: 283px;
+  }
+}
+
+.H1_TextAtThePage {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -31,8 +89,18 @@
   padding: 0 0 30px;
   color: #1b1b1b;
 }
+@media screen and (max-width: 375px) {
+  .H1_TextAtThePage {
+    width: 309px;
+    height: 76px;
+    font-weight: 500;
+    font-size: 32px;
+    color: #1b1b1b;
+    padding: 0;
+  }
+}
 
-.SecondTextAtThePage {
+.P_TextAtThePage {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -45,73 +113,488 @@
   color: #1b1b1b;
 }
 
-.classForBox {
-  display: flex;
-  align-items: center;
-  padding: 0 0 26px;
+@media screen and (max-width: 375px) {
+  .P_TextAtThePage {
+    width: 335px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1b1b1b;
+    padding: 0;
+  }
 }
 
-.classNameForBoxImageAndText {
+/*MIDLE*/
+
+.ForTextPosition {
+  display: flex;
+  flex-direction: column;
+  width: 444px;
+  height: 223px;
+  text-align: left; 
+}
+@media screen and (max-width: 375px) {
+
+  .ForTextPosition {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    height: 102px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+}
+
+.ForImageGirl{
+  width: 502px;
+  height: 343px;
+}
+
+@media screen and (max-width: 375px) {
+  .ForImageGirl{
+    width: 240px;
+    height: 164px;
+  }
+  }
+
+  .ForImageCar{
+    width: 502px;
+    height: 267px;
+  }
+
+@media screen and (max-width: 375px) {
+.ForImageCar{
+  width: 246px;
+  height: 131px;
+}
+}
+
+.ForImageDevice{
+  width: 500px;
+  height: 258px;
+}
+
+@media screen and (max-width: 375px) {
+  .ForImageDevice{
+    width: 242px;
+    height: 125px;
+  }
+  }
+
+.ForBoxImageAndText {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  padding: 0 0 160px;
+  padding: 0 0 160px; 
+
+}
+@media screen and (max-width: 375px) {
+  .ForBoxImageAndText {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 335px;
+    height: 320px;
+    padding: 0;
+    margin: 20px;
+}
 }
 
-.classNameForBoxImageAndText_revers {
+
+.ForBoxImageAndText_revers {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  padding: 0 0 160px;
+  padding: 0 0 160px; 
 }
 
-.classNameForImagePosition {
-  display: flex;
-}
-.classNameForImage {
-  display: flex;
+@media screen and (max-width: 375px) {
+  .ForBoxImageAndText_revers {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 335px;
+    height: 320px;
+    padding: 0;
+    margin: 20px;
+  }
+
 }
 
 .TextH2_About {
-  /* H2 Desktop */
   text-align: left;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
-  /* or 58px */
   margin: 0;
   padding: 0 0 20px;
-  /* Black */
-
   color: #1b1b1b;
 }
-.TextP_About {
-  /* Text M */
 
+@media screen and (max-width: 375px) {
+.TextH2_About{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 120%;
+color: #1B1B1B;
+margin: 0;
+}
+}
+.TextP_About {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-
-  /* Black */
-
   color: #1b1b1b;
 }
 
-.classNameForTextPosition {
-  display: flex;
-  flex-direction: column;
-  width: 444px;
-  height: 223px;
-  text-align: left;
+@media screen and (max-width: 375px) {
+  .TextP_About{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 147.3%;
+color: #1B1B1B;
+  }
 }
 
-.BoxFor_rental_steps {
+
+/*RENTAL*/
+
+.stepImg {
+  width: 108px;
+  height: 108px;
+}
+
+@media screen and (max-width: 375px) {
+  .stepImg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.lineImg {
+  width: 231px;
+  height: 1px
+}
+@media screen and (max-width: 375px) {
+  .lineImg {
+    width: 1px;
+    height: 20px;
+  }
+}
+.Container_rentalSteps{
+  height: 552px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #f7f9fb;
+}
+@media screen and (max-width: 375px) {
+
+.Container_rentalSteps{
+  height: 300px;
+  display: flex;
+  width: 335px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+}
+
+.Container_ImgAndStepRental{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 1250px;
+  height: 300px;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #f7f9fb;
+}
+
+@media screen and (max-width: 375px) {
+  .Container_ImgAndStepRental {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 185px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: space-between;
+  }
+}
+
+.H2_rental_steps {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  margin: 0;
+  color: #1b1b1b;
+}
+@media screen and (max-width: 375px) {
+  .H2_rental_steps {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    font-size: 24px;
+    margin: 0;
+    color: #1b1b1b;
+    justify-content: flex-start;
+  }
+}
+
+.ImgStep_Rental {
+  display: flex;
+  flex-direction: row;
+  width: 1020px;
+  align-items: center;
+  align-self: end;
+}
+@media screen and (max-width: 375px) {
+  .ImgStep_Rental {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    height: 160px;
+    width: 30px;
+  }
+}
+
+.TextStepRentCar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1245px;
+  padding: 0 0 110px;
+  align-self: flex-start
+}
+
+@media screen and (max-width: 375px) {
+  .TextStepRentCar {
+    display: flex;
+    width: 228px;
+    height: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+}
+
+.text_Rent {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  /* font-size: 24px; */
+  font-size: 14px;
+  text-align: center;
+  color: #1b1b1b;
+  width: 100px;
+}
+
+@media screen and (max-width: 375px) {
+  .text_Rent {
+    display: flex;
+    font-size: 14px;
+    color: #1b1b1b;
+    height: 21px;
+    align-items: flex-end;
+    width: 170px;
+
+  }
+}
+
+
+
+/*DO YOU HAVE CAR*/
+
+.Container_DoYouHaveCar_steps {
+  height: 618px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+@media screen and (max-width: 375px) {
+
+.Container_DoYouHaveCar_steps{
+  height: 380px;
+  display: flex;
+  width: 335px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+}
+
+
+.H2_DoYouHAveCar {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  margin: 0;
+ 
+  color: #1b1b1b; 
+}
+@media screen and (max-width: 375px) {
+  .H2_DoYouHAveCar {
+    width: 300px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    font-size: 24px;
+    margin: 0;
+    color: #1b1b1b;
+    justify-content: flex-start;
+  }
+}
+
+.P_DoYouHAveCar {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 147.3%;
+  
+  text-align: center;
+  margin: 0;
+  
+  color: #1b1b1b;
+}
+
+@media screen and (max-width: 375px) {
+  .P_DoYouHAveCar {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    display: flex;
+    font-size: 14px;
+    margin: 0;
+    color: #1b1b1b;
+    width: 300px;
+    text-align: left;  
+  }
+}
+
+.Container_ImgAndStepDoYouHaveCar {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 1200px;
+  height: 300px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 375px) {
+  .Container_ImgAndStepDoYouHaveCar {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 230px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: space-between;
+  }
+}
+
+.ImgStep_DoYouHaveCar {
+  display: flex;
+  flex-direction: row;
+  width: 1050px;
+  align-items: center;
+  align-self: end;
+}
+@media screen and (max-width: 375px) {
+  .ImgStep_DoYouHaveCar {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    height: 206px;
+    width: 30px;
+  }
+}
+
+.TextStepDoYouHaveCar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1200px;
+  padding: 0 0 110px;
+  align-self: flex-start
+}
+
+@media screen and (max-width: 375px) {
+  .TextStepDoYouHaveCar {
+    display: flex;
+    width: 228px;
+    height: 228px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+
+.text_YouHaveCar {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  /* font-size: 24px; */
+  font-size: 14px;
+  text-align: center;
+  color: #1b1b1b;
+  width: 100px;
+}
+
+@media screen and (max-width: 375px) {
+  .text_YouHaveCar {
+    display: flex;
+    font-size: 14px;
+    color: #1b1b1b;
+    height: 21px;
+    align-items: flex-end;
+    width: 170px;
+
+  }
+}
+
+
+/*SLIDER*/
+
+.windowForSliderContent {
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+
+.swiperBox {
   display: flex;
   height: 552px;
   left: 0px;
@@ -119,84 +602,157 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  margin: 0 0 120px;
+  margin: 0 0 110px;
 }
 
-.BoxFor_DoYouHaveCar_steps {
+@media screen and (max-width: 375px) {
+
+.swiperBox {
+  display: flex;
+  left: 0px;
+  background: #f7f9fb;
+  flex-direction: column;
+  align-items: center;
+  width: 375px;
+  height: 403px;
+  margin: 0 20px 80px;
+  }
+}
+
+.sliderButtonLeft {
+  align-self: center;
+  background-color: #f7f9fb;
+  border: 0;
+  cursor: pointer;
+  text-align: center;
+}
+@media screen and (max-width: 375px) {
+  .sliderButtonLeft {
+      display: none;
+  }
+
+}
+
+.sliderButtonRight {
+  align-self: center;
+  background-color: #f7f9fb;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+@media screen and (max-width: 375px) {
+  .sliderButtonRight {
+      display: none;
+  }
+}
+
+.dotsNavSlider {
+  margin-bottom: 90px;
+  margin-top: 42px;
+  margin-right: 10px;
+  border: 0;
+  background-color: #f7f9fb;
+}
+@media screen and (max-width: 375px) {
+  .dotsNavSlider {
+    margin-top: 0px 
+   }
+}
+
+.activeDotsNavSlider {
+  margin-bottom: 90px;
+  margin-top: 42px;
+  margin-right: 10px;
+  border: 0;
+  background-color: #f7f9fb;
+}
+@media screen and (max-width: 375px) {
+  .activeDotsNavSlider {
+    margin-top: 0px  
+  }
+}
+
+.ContentImgSlider {
+  width: 678px;
+  height: 233px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+@media screen and (max-width: 375px) {
+  .ContentImgSlider {
+    width: 335px;
+    height: 229px;
+    margin-top: 0px ;
+    padding: 10px 0 10px; 
+  }
+}
+
+
+.H2TextCustomerReviews {
+  /* H2 Desktop */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  /* identical to box height, or 58px */
+  margin: 110px 0 0;
+  padding: 0 0 58px;
+  /* Black */
+  color: #1b1b1b;
+}
+
+@media screen and (max-width: 375px) {
+  .H2TextCustomerReviews {
+    font-size: 24px;
+    padding: 0 0 30px;
+  }
+}
+
+/*BUTTOM*/
+
+.Container_BigBabyWithACar {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.classForBoxInBox {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.img_BigBaby {
+padding-bottom: 40px;
+width: 456px;
+height: 338px;
+
 }
 
-.classForBoxStepBox {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  padding: 0 0 110px;
+@media screen and (max-width: 375px) {
+  .img_BigBaby {
+    width: 215px;
+height: 160px;
+    }
 }
 
-.Text_rental_stepsH2 {
-  /* H2 Desktop */
-
+.H2_TryRent {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 48px;
-
+  line-height: 120%;
   /* identical to box height, or 58px */
-  margin: 0;
-  /* Black */
 
-  color: #1b1b1b;
-}
-
-.Text_DoYouHAveCarH2 {
-  /* H2 Desktop */
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 48px;
-  /* identical to box height, or 58px */
-  margin: 0;
-  padding: 0 0 20px;
-  /* Black */
-  color: #1b1b1b;
-}
-
-.Text_DoYouHAveCarParagraph {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 147.3%;
-  /* or 35px */
   text-align: center;
   margin: 0;
-  padding: 0 0 80px;
-  /* Black */
-  color: #1b1b1b;
-}
-
-.text_Rent_And_YouHaveCar {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-
-  text-align: center;
-
+  padding: 0 0 40px;
   /* Black */
 
   color: #1b1b1b;
 }
+
+@media screen and (max-width: 375px) {
+  .H2_TryRent {
+    font-size: 24px;
+    }
+}
+
+
 
 .RegistrationButton {
   padding: 16px 40px;
@@ -218,87 +774,9 @@
   color: #ffffff;
 }
 
-.BoxFor_BigBabyWithACar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.BigBaby {
-  padding-bottom: 40px;
-}
-
-.TexTryRent {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 120%;
-  /* identical to box height, or 58px */
-
-  text-align: center;
-  margin: 0;
-  padding: 0 0 40px;
-  /* Black */
-
-  color: #1b1b1b;
-}
-
-.swiperBox {
-  display: flex;
-  height: 552px;
-  left: 0px;
-  background: #f7f9fb;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  margin: 0 0 110px;
-}
-
-.H2TextCustomerReviews {
-  /* H2 Desktop */
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 48px;
-  /* identical to box height, or 58px */
-  margin: 110px 0 0;
-  padding: 0 0 58px;
-  /* Black */
-  color: #1b1b1b;
-}
-
-.sliderButtonLeft {
-  align-self: center;
-  background-color: #f7f9fb;
-  border: 0;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-}
-.sliderButtonRight {
-  align-self: center;
-  background-color: #f7f9fb;
-  border: 0;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-}
-
-.dotsNavSlider {
-    margin-bottom: 90px;
-  margin-top: 42px;
-  margin-right: 10px;
-  border: 0;
-  background-color: #f7f9fb;
-}
-.activeDotsNavSlider {
-    margin-bottom: 90px;
-  margin-top: 42px;
-  margin-right: 10px;
-  border: 0;
-  background-color: #f7f9fb;
-}
-.ContentImgSlider {
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05)
+@media screen and (max-width: 375px) {
+  .RegistrationButton {
+    width: 335px;
+    height: 51px;
+    }
 }

@@ -4,12 +4,15 @@ import "../FAQ/FaqNew.css";
 
 import Question_box from "./Question_box";
 import Image from "./Image";
+import VisibilitySensor from "react-visibility-sensor";
 
 import "../img/undraw_questions.png";
 import "../img/Up.png";
 import "../img/Down.png";
 
-function MainQuestions(props: {}) {
+function MainQuestions(props: {
+  onChange: (isVisible: Boolean) => void;
+}) {
   let contentQuestionBox = [
     {
       question: "Могу ли я отменить бронь?",
@@ -40,6 +43,7 @@ function MainQuestions(props: {}) {
 
   return (
     <>
+     <VisibilitySensor onChange={props.onChange}>
       <div className="drawQuestion">
         <Image
           className={"drawQuestion__img"}
@@ -47,6 +51,7 @@ function MainQuestions(props: {}) {
           alt={"Картинка команды"}
         />
       </div>
+      </VisibilitySensor>
       <h1>Частые вопросы</h1>
       <p className="question__info">
         Отвечаем на вопросы, которые у вас могут возникнуть.

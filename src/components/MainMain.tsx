@@ -1,8 +1,7 @@
 import * as React from "react";
 
 import BigBoxImgAndText from "./BigBoxImgAndText";
-import StepBox from "./StepBox";
-import MySwiper from "./MyCarousel";
+import StepImgOnMainPage from "./StepImgOnMainPage";
 import Image from "./Image";
 import { Button } from "react-bootstrap";
 
@@ -20,8 +19,11 @@ import "../img/DoYouHaveCarEllipses/somthing.png";
 import "../img/RentalEllipses/Ellipse.png";
 
 import "../img/BigBabyWithACar.png";
-import "../img/BigGirlOnACar.png";
+import "../img/BigGirlOnACar1.png";
+import "../img/BigGirlOnACar2.png";
 import "../img/Line 1.png";
+import "../img/Line2.png";
+
 import ReactSimplyCarouselExample from "./MyCarousel";
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -30,10 +32,10 @@ function MainMain(props:{
 }) {
   const contentForBigBoxes = [
     {
-      classNameForImagePosition: "classNameForImagePosition",
-      classNameForTextPosition: "classNameForTextPosition",
-      classNameForImage: "classNameForImage",
-      classNameForBoxImageAndText: "classNameForBoxImageAndText",
+      classNameForImagePosition: "ForImagePosition",
+      classNameForTextPosition: "ForTextPosition",
+      classNameForImage: "ForImageGirl",
+      classNameForBoxImageAndText: "ForBoxImageAndText",
       src: "img/undraw_fast_car_p4cu.png",
       alt: "",
       header: "Аренда напрямую от владельцев",
@@ -41,10 +43,10 @@ function MainMain(props:{
         "Вы получите автомобиль от его собственника, а мы проверим юридическую чистоту и техническую исправность.",
     },
     {
-      classNameForImagePosition: "classNameForImagePosition",
-      classNameForTextPosition: "classNameForTextPosition",
-      classNameForImage: "classNameForImage",
-      classNameForBoxImageAndText: "classNameForBoxImageAndText_revers",
+      classNameForImagePosition: "ForImagePosition",
+      classNameForTextPosition: "ForTextPosition",
+      classNameForImage: "ForImageCar",
+      classNameForBoxImageAndText: "ForBoxImageAndText_revers",
       src: "img/undraw_Vehicle_sale_a645.png",
       alt: "",
       header: "Автомобили на любой вкус",
@@ -52,10 +54,10 @@ function MainMain(props:{
         "Вы всегда можете подобрать автомобиль любого класса от бюджетных моделей до премиум-класса и спорткаров.",
     },
     {
-      classNameForImagePosition: "classNameForImagePosition",
-      classNameForTextPosition: "classNameForTextPosition",
-      classNameForImage: "classNameForImage",
-      classNameForBoxImageAndText: "classNameForBoxImageAndText",
+      classNameForImagePosition: "ForImagePosition",
+      classNameForTextPosition: "ForTextPosition",
+      classNameForImage: "ForImageDevice",
+      classNameForBoxImageAndText: "ForBoxImageAndText",
       src: "img/undraw_online_transactions_02ka.png",
       alt: "",
       header: "Гарантия честной аренды",
@@ -66,84 +68,92 @@ function MainMain(props:{
 
   const contentForRentalSteBoxes = [
     {
-      classForBox: "classForBox",
       srcLine: "img/Line 1.png",
-      className: "Rental__stepOne",
+      classForStepImg: "stepImg",
+      classForLineStep: "lineImg",
       src: "img/Ellipse.png",
       alt: "Шаг первый",
-      paragraph: <p className="text_Rent_And_YouHaveCar">Выберите <br />автомобиль</p>,
+      paragraph: <p className="text_Rent">Выберите автомобиль</p>,
     },
     {
-      classForBox: "classForBox",
       srcLine: "img/Line 1.png",
-      className: "Rental__stepTwo",
+      classForStepImg: "stepImg",
+      classForLineStep: "lineImg",
       src: "img/Ellipse.png",
       alt: "Шаг второй",
-      paragraph: <p className="text_Rent_And_YouHaveCar">Забронируйте  <br /> дату и время</p>,
+      paragraph: <p className="text_Rent">Забронируйте  дату и время</p>,
     },
     {
-      classForBox: "classForBox",
-      classNameForImg: "Rental__stepThree",
+     
+      classForStepImg: "stepImg",
+      classForLineStep: "lineImg",
       src: "img/Ellipse.png",
       alt: "Шаг третий",
-      paragraph: <p className="text_Rent_And_YouHaveCar">Получите <br /> автомобиль</p>,
+      paragraph: <p className="text_Rent">Получите  автомобиль</p>,
     },
   ];
 
   const contentForDoYouHaveCArSteBoxes = [
     {
-      srcLine: "img/Line 1.png",
-      classForBox: "classForBox",
-      classNameForImg: "DoYouHaveСar__stepOne",
+      srcLine: "img/Line2.png",
+      classForStepImg: "stepImg",
+      classForLineStep: "lineImg",
       src: "img/label.png",
       alt: "Вы сами указываете цену",
-      paragraph: <p className="text_Rent_And_YouHaveCar"> Вы сами <br /> указываете цену </p>,
+      paragraph: <p className="text_YouHaveCar"> Вы сами указываете цену </p>,
     },
     {
-      srcLine: "img/Line 1.png",
-      classForBox: "classForBox",
-      classNameForImg: "DoYouHaveСar__stepTwo",
+      srcLine: "img/Line2.png",
+      classForStepImg: "stepImg",
+      classForLineStep: "lineImg",
       src: "img/dollar.png",
       alt: "Мы страхуем автомобили",
-      paragraph: <p className="text_Rent_And_YouHaveCar"> Мы страхуем <br /> автомобили</p>,
+      paragraph: <p className="text_YouHaveCar"> Мы страхуем автомобили</p>,
     },
     {
-      srcLine: "img/Line 1.png",
-      classForBox: "classForBox",
-      classNameForImg: "DoYouHaveСar__stepThree",
+      srcLine: "img/Line2.png",
+      classForLineStep: "lineImg",
+      classForStepImg: "stepImg",
       src: "img/somthing.png",
       alt: "Наша комиссия всего 3%",
-      paragraph: <p className="text_Rent_And_YouHaveCar"> Наша комиссия <br /> всего 3% </p>,
+      paragraph: <p className="text_YouHaveCar"> Наша комиссия всего 3% </p>,
     },
     {
-      classForBox: "classForBox",
-      classNameForImg: "DoYouHaveСar__stepFour",
+      classForLineStep: "lineImg",
+      classForStepImg: "stepImg",
       src: "img/money.png",
       alt: "Выплаты каждую неделю",
-      paragraph: <p className="text_Rent_And_YouHaveCar"> Выплаты <br /> каждую неделю </p>,    
+      paragraph: <p className="text_YouHaveCar"> Выплаты каждую неделю </p>,    
     },
   ];
 
   return (
     <>
     <VisibilitySensor onChange={props.onChange}>
-        <div className="BoxFor_BiGirlWithACar">
+        <div className="Container_BiGirlOnACarAndText">
            
-           <div className="BoxFor_ButtonAndText">
-          <h1 className="FirstTextAtThePage">Каршеринг в любой точке России</h1>
-          <p className="SecondTextAtThePage">Будьте всегда за рулём во время путешествий и командировок.</p>
+           <div className="Container_ButtonAndText">
+          <h1 className="H1_TextAtThePage">Каршеринг в любой точке России</h1>
+          <p className="P_TextAtThePage">Будьте всегда за рулём во время путешествий и командировок.</p>
           <Button className={"RegistrationButton"}>Зарегистрироваться</Button>
         </div>
 
-        <div className={"BigGirlOnACar"}>
+        <div className={"Container_BigGirlOnACar"}>
           <Image
-            src={"img/BigGirlOnACar.png"}
-            alt={""}
+            className="BigGirlOnACar1"
+            src={"img/BigGirlOnACar1.png"}
+            alt={"Девушка рядом с автомобилем"}
+          /> 
+           <Image
+            className="BigGirlOnACar2"
+            src={"img/BigGirlOnACar2.png"}
+            alt={"Девушка рядом с автомобилем"}
           />  
           </div>
         </div>
         </VisibilitySensor>
        
+
 
       {contentForBigBoxes.map((bigBox) => (
         <BigBoxImgAndText
@@ -158,36 +168,52 @@ function MainMain(props:{
         />
       ))}
 
-      <div className="BoxFor_rental_steps">
-        <h2 className="Text_rental_stepsH2">Как арендовать автомобиль</h2>
-        <div className="classForBoxStepBox">
+
+
+      <div className="Container_rentalSteps">
+        <h2 className="H2_rental_steps">Как арендовать автомобиль</h2>
+        <div className="Container_ImgAndStepRental">
+        <div className="ImgStep_Rental">
           {contentForRentalSteBoxes.map((box) => (
-            <StepBox
-              classForBox={box.classForBox}
-              classNameForImg={box.classNameForImg}
+            <StepImgOnMainPage
+
+              classForLineStep={box.classForLineStep}
+              classForStepImg={box.classForStepImg}
               src={box.src}
               srcLine={box.srcLine}
               alt={box.alt}
-              paragraph={box.paragraph}
             />
           ))}
         </div>
-      </div>
+       <div className="TextStepRentCar">
+        {contentForRentalSteBoxes.map((box) => (
+              box.paragraph
+        ))}
+        </div>
+        </div>
+      </div> 
 
-      <div className="BoxFor_DoYouHaveCar_steps">
-        <h2 className="Text_DoYouHAveCarH2">У вас есть автомобиль?</h2>
-        <p className="Text_DoYouHAveCarParagraph"> Чтобы он не простаивал — сдавайте его в аренду и зарабатывайте. </p>
-        <div className="classForBoxStepBox">
+      <div className="Container_DoYouHaveCar_steps">
+        <h2 className="H2_DoYouHAveCar">У вас есть автомобиль?</h2>
+        <p className="P_DoYouHAveCar"> Чтобы он не простаивал — сдавайте его в аренду и зарабатывайте. </p>
+        <div className="Container_ImgAndStepDoYouHaveCar">
+          <div className="ImgStep_DoYouHaveCar">
+            {contentForDoYouHaveCArSteBoxes.map((box) => (
+              <StepImgOnMainPage
+                
+                classForLineStep={box.classForLineStep}
+                classForStepImg={box.classForStepImg}
+                srcLine={box.srcLine}
+                src={box.src}
+                alt={box.alt}
+              />
+            ))}
+          </div>
+          <div className="TextStepDoYouHaveCar">
           {contentForDoYouHaveCArSteBoxes.map((box) => (
-            <StepBox
-              srcLine={box.srcLine}
-              classForBox={box.classForBox}
-              classNameForImg={box.classNameForImg}
-              src={box.src}
-              alt={box.alt}
-              paragraph={box.paragraph}
-            />
+                box.paragraph
           ))}
+          </div>
         </div>
       </div>
 
@@ -196,11 +222,11 @@ function MainMain(props:{
         <ReactSimplyCarouselExample/>
       </div>
 
-      <div className="BoxFor_BigBabyWithACar">
-        <div className="BigBaby">
-          <Image className={""} src={"img/BigBabyWithACar.png"} alt={""} />
+      <div className="Container_BigBabyWithACar">
+        <div className="img_BigBaby">
+          <Image className={"img_BigBaby"} src={"img/BigBabyWithACar.png"} alt={""} />
         </div>
-        <h2 className="TexTryRent">Попробуйте аренду на себе</h2>
+        <h2 className="H2_TryRent">Попробуйте аренду на себе</h2>
         <Button className={"RegistrationButton"}>Зарегистрироваться</Button>
       </div>
       

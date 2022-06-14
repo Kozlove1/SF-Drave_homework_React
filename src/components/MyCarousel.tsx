@@ -18,7 +18,7 @@ function MyCarousel() {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   return (
-    <div>
+    <div className="windowForSliderContent">
       <ReactSimplyCarousel
         activeSlideIndex={activeSlideIndex}
         onRequestChange={setActiveSlideIndex}
@@ -56,13 +56,13 @@ function MyCarousel() {
         easing="linear"
       >
         
-        <div style={{ width: 678, height: 233}}>
+        <div >
           <Image className="ContentImgSlider" src="img/jerry.png"/>
         </div>
-        <div style={{ width: 678, height: 233}}>
+        <div >
         <Image className="ContentImgSlider" src="img/rickMorty.png"/>
         </div>
-        <div style={{ width: 678, height: 233}}>
+        <div >
         <Image className="ContentImgSlider" src="img/Ass.png"/>
         </div>
       </ReactSimplyCarousel>

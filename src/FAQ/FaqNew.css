@@ -32,9 +32,6 @@ body {
 /**
    * Render the `main` element consistently in IE.
    */
-main {
-  display: block;
-}
 
 /**
    * Correct the font size and margin on `h1` elements within `section` and
@@ -466,7 +463,7 @@ template {
 }
 
 .drawQuestion__img {
-  margin-top: 50px;
+  margin-top: 170px;
   width: 360px;
   height: 276px;
 }
@@ -475,7 +472,7 @@ template {
   .drawQuestion__img {
     width: 242px;
     height: 202px;
-    margin-top: 40px;
+    margin-top: 110px;
   }
 }
 

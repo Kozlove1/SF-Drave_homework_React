@@ -34,8 +34,8 @@ function App(props: {}) {
       />
       <Routes>
             <Route path="" element={<MainMain onChange={onChange}></MainMain>}/>
-            <Route path="aboutUs" element={<MainAboutUsAndTeam/>}/>
-            <Route path="questions" element={<MainQuestions/>}/>
+            <Route path="aboutUs" element={<MainAboutUsAndTeam onChange={onChange}/>}/>
+            <Route path="questions" element={<MainQuestions onChange={onChange}/>}/>
       </Routes>
       <Footer />
     </div>

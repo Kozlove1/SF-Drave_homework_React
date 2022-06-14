@@ -5,6 +5,9 @@ import "../AboutUs/AboutUs.css";
 import Contacts_board from "./Contacts_board";
 import Image from "./Image";
 import Team_box from "./Team_box";
+import VisibilitySensor from "react-visibility-sensor";
+
+
 import "../img/TeamMember/BackMan.png";
 import "../img/TeamMember/CEOman.png";
 import "../img/TeamMember/CopyWriterWoman.png";
@@ -13,7 +16,9 @@ import "../img/TeamMember/FrontMan.png";
 import "../img/TeamMember/SMmWoman.png";
 import "../img/undraw_team.png";
 
-function MainAboutUs(props: {}) {
+function MainAboutUs(props: {
+  onChange: (isVisible: Boolean) => void;
+}) {
   let teamMembers = [
     {
       name: "Иван Иванов",
@@ -55,6 +60,7 @@ function MainAboutUs(props: {}) {
 
   return (
     <>
+      <VisibilitySensor onChange={props.onChange}>
       <div className="drawTeam">
         <Image
           className={"drawTeam__img"}
@@ -62,6 +68,7 @@ function MainAboutUs(props: {}) {
           alt={"Картинка команды"}
         />
       </div>
+      </VisibilitySensor>
       <h1>О нас</h1>
       <p className="about-us__info">
         Это учебный проект, созданный с целью получения боевого опыта в
