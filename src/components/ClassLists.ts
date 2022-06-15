@@ -4,4 +4,6 @@ export const enum ClassLists {
   notActive = "notActive",
   head = "head",
   headNoOpacity = "headNoOpacity",
+  isActive = "is-active",
+  nothing = "",
 }

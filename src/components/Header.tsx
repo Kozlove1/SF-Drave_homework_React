@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import "../AboutUs/AboutUs.css";
+import "../style/Hamburger.css";
 
 import { Pages } from "./Pages";
 
@@ -11,6 +12,9 @@ import { ClassLists } from "./ClassLists";
 import "../img/Logo.png";
 import "../img/VectorBurger.png";
 
+import Popup from 'reactjs-popup';
+
+ 
 function Header(props: {
   currentPage: Pages;
   setCurrentPage: (page: Pages) => void;
@@ -36,6 +40,16 @@ function Header(props: {
     },
   ];
 
+  const [classNameActive, setClassNameActive] = React.useState(
+    ClassLists.nothing
+  );
+
+  function onClick() {
+    classNameActive === ClassLists.nothing
+      ? setClassNameActive(ClassLists.isActive)
+      : setClassNameActive(ClassLists.nothing);
+  }
+
   return (
     <>
       <header className={`${props.classNameHedeNoOpacity}`} >
@@ -47,9 +61,14 @@ function Header(props: {
             height={"28px"}
           />
         </Link>
-        <div className="head__burger-menu">
-          <Image src={"img/VectorBurger.png"} alt={"развернуть меню"} />
-        </div>
+        
+        <button className={`hamburger head__burger-menu hamburger--vortex-r ${classNameActive}`}
+        type="button" onClick={onClick}>
+          <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
+        </span>
+        </button>
+
         <nav className="head__menu">
           {navLinksContent.map((linkContent) => (
             <Link

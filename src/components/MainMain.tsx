@@ -30,6 +30,7 @@ import VisibilitySensor from "react-visibility-sensor";
 function MainMain(props:{
   onChange: (isVisible: Boolean) => void;
 }) {
+ 
   const contentForBigBoxes = [
     {
       classNameForImagePosition: "ForImagePosition",
@@ -86,7 +87,7 @@ function MainMain(props:{
     {
      
       classForStepImg: "stepImg",
-      classForLineStep: "lineImg",
+      classForLineStep: "lineImgNone",
       src: "img/Ellipse.png",
       alt: "Шаг третий",
       paragraph: <p className="text_Rent">Получите  автомобиль</p>,
@@ -97,7 +98,7 @@ function MainMain(props:{
     {
       srcLine: "img/Line2.png",
       classForStepImg: "stepImg",
-      classForLineStep: "lineImg",
+      classForLineStep: "lineImgDoYou",
       src: "img/label.png",
       alt: "Вы сами указываете цену",
       paragraph: <p className="text_YouHaveCar"> Вы сами указываете цену </p>,
@@ -105,21 +106,21 @@ function MainMain(props:{
     {
       srcLine: "img/Line2.png",
       classForStepImg: "stepImg",
-      classForLineStep: "lineImg",
+      classForLineStep: "lineImgDoYou",
       src: "img/dollar.png",
       alt: "Мы страхуем автомобили",
       paragraph: <p className="text_YouHaveCar"> Мы страхуем автомобили</p>,
     },
     {
       srcLine: "img/Line2.png",
-      classForLineStep: "lineImg",
+      classForLineStep: "lineImgDoYou",
       classForStepImg: "stepImg",
       src: "img/somthing.png",
       alt: "Наша комиссия всего 3%",
       paragraph: <p className="text_YouHaveCar"> Наша комиссия всего 3% </p>,
     },
     {
-      classForLineStep: "lineImg",
+      classForLineStep: "lineImgNone",
       classForStepImg: "stepImg",
       src: "img/money.png",
       alt: "Выплаты каждую неделю",
@@ -129,7 +130,7 @@ function MainMain(props:{
 
   return (
     <>
-    <VisibilitySensor onChange={props.onChange}>
+   
         <div className="Container_BiGirlOnACarAndText">
            
            <div className="Container_ButtonAndText">
@@ -138,6 +139,7 @@ function MainMain(props:{
           <Button className={"RegistrationButton"}>Зарегистрироваться</Button>
         </div>
 
+        <VisibilitySensor onChange={props.onChange}>
         <div className={"Container_BigGirlOnACar"}>
           <Image
             className="BigGirlOnACar1"
@@ -148,12 +150,12 @@ function MainMain(props:{
             className="BigGirlOnACar2"
             src={"img/BigGirlOnACar2.png"}
             alt={"Девушка рядом с автомобилем"}
-          />  
+          /> 
           </div>
+          </VisibilitySensor>
         </div>
-        </VisibilitySensor>
+        
        
-
 
       {contentForBigBoxes.map((bigBox) => (
         <BigBoxImgAndText
